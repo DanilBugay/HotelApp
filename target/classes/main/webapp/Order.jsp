@@ -1,4 +1,4 @@
-<%@page import="Hotel.DBEntity.Room"%>
+<%@page import="Hotel.entity.Room"%>
 <%@page import="java.util.List"%>
 <%@ include file="jspf/page.jspf"%>
 <%@ include file="jspf/taglib.jspf"%>

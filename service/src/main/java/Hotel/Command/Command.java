@@ -1,4 +1,4 @@
-package Hotel.Command;
+package Hotel.command;
 
 import java.io.IOException;
 import java.io.Serializable;

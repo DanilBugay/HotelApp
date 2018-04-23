@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="MavenLab:war">
-    <output-path>$PROJECT_DIR$/frontEndLayer/target</output-path>
-    <root id="archive" name="MavenProject.war">
-      <element id="artifact" artifact-name="MavenLab:war exploded" />
-    </root>
-  </artifact>
-</component>

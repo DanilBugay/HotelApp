@@ -1,11 +1,14 @@
-package Hotel.Command.Admin;
+package Hotel.command.Admin;
 
-import Hotel.Command.Command;
-import Hotel.DB.IDAO.IDAOFactory;
-import Hotel.DB.IDAO.OrderDAO;
-import Hotel.Entity.Order;
-import Hotel.DBEntity.Room;
-import Hotel.MySQL.MySQLDAOFactory;
+import Hotel.command.Command;
+import Hotel.additionalEntity.Order;
+import Hotel.config.ApplicationConfig;
+import Hotel.entity.Room;
+import Hotel.service.OrderService;
+import Hotel.service.OrderServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,8 +18,8 @@ public class AdminConfirm extends Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        IDAOFactory daoFactory = new MySQLDAOFactory();
-        OrderDAO daoOrder = daoFactory.createOrderDAO();
+        ApplicationContext context = new ClassPathXmlApplicationContext("model.xml");
+        OrderService service = context.getBean("order-service", OrderService.class);
         Integer status = 1;
         if (request.getParameter("bConfirm") != null) {
             status = 2;
@@ -34,9 +37,9 @@ public class AdminConfirm extends Command {
                 int row = Integer.parseInt(currentRow);
                 Order order = dataRoomHistory.get(row);
                 Room room = new Room(order.getRoomNumber());
-                daoOrder.updateStatusOrder(room, status);
+                service.updateStatusOrder(room, order.getDateStart(), order.getDateEnd(), status);
             }
-            dataRoomHistory = daoOrder.loadRoomHistory(1);
+            dataRoomHistory = service.loadRoomHistory(1);
             Integer sizeList = dataRoomHistory.size();
             int flagOrder = 1;
             if (sizeList == 0) {

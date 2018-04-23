@@ -1,0 +1,14 @@
+<div class="navbar navbar-inverse navbar-bottom" style="margin-bottom:-20px; margin-top: 100px;">
+    <div class="container-fluid rooms_3">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+                <p class="footer_text">&copy; 2016 hotel complex "Lighthouse". Official website of Lighthouse Hotel </p>
+            </div>
+            <div class="col-lg-5 right">
+                <p class="footer_text">Ukraine, 02002, Kramatorsk, st. Park, 22,  +38 (098) 580 45 15</p>
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
+</div>

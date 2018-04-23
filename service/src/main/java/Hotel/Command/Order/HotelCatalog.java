@@ -1,10 +1,13 @@
-package Hotel.Command.Order;
+package Hotel.command.Order;
 
-import Hotel.Command.Command;
-import Hotel.DB.IDAO.IDAOFactory;
-import Hotel.DB.IDAO.RoomDAO;
-import Hotel.DBEntity.Room;
-import Hotel.MySQL.MySQLDAOFactory;
+import Hotel.command.Command;
+import Hotel.config.ApplicationConfig;
+import Hotel.entity.Room;
+import Hotel.service.RoomService;
+import Hotel.service.RoomServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -30,8 +33,8 @@ public class HotelCatalog extends Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        IDAOFactory daoFactory = new MySQLDAOFactory();
-        RoomDAO daoRoom = daoFactory.createRoomDAO();
+        ApplicationContext context = new ClassPathXmlApplicationContext("model.xml");
+        RoomService service = context.getBean("room-service", RoomService.class);
         String forward;
         String ID = request.getParameter("ID_room_type");
         String dateStart = request.getParameter("Date_start");
@@ -41,7 +44,7 @@ public class HotelCatalog extends Command {
         if (startDate == true && endDate == true) {
             request.getSession().setAttribute("Attr_DateStart", dateStart);
             request.getSession().setAttribute("Attr_DateEnd", dateEnd);
-            List<Room> dataRoomCatalog = daoRoom.loadRoomCatalog(ID, dateStart, dateEnd);
+            List<Room> dataRoomCatalog = service.loadRoomCatalog(ID, dateStart, dateEnd);
             Integer sizeList = dataRoomCatalog.size();
             int flagList = 1;
             if (sizeList == 0) {

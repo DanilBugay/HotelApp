@@ -7,8 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="client" />
-        <module name="dao" />
         <module name="MavenLab" />
+        <module name="model" />
         <module name="service" />
       </profile>
     </annotationProcessing>
@@ -17,6 +17,7 @@
       <module name="dao" target="1.7" />
       <module name="MavenLab" target="1.7" />
       <module name="MavenProject" target="1.7" />
+      <module name="model" target="1.7" />
       <module name="ProjectDanilBugay" target="1.7" />
       <module name="service" target="1.7" />
     </bytecodeTargetLevel>

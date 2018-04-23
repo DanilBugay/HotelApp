@@ -1,7 +1,7 @@
-package Hotel.Command.User;
+package Hotel.command.User;
 
-import Hotel.Command.Command;
-import Hotel.DBEntity.Room;
+import Hotel.command.Command;
+import Hotel.entity.Room;
 import java.io.*;
 import java.util.List;
 import javax.servlet.*;

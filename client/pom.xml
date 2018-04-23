@@ -3,14 +3,14 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>ua.com.danilBugay</groupId>
-    <artifactId>mavenLab</artifactId>
+    <artifactId>clinet</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>MavenLab Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
     <parent>
-        <artifactId>ProjectDanilBugay</artifactId>
+        <artifactId>projectDanilBugay</artifactId>
         <groupId>ua.com.danilBugay</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -26,11 +26,6 @@
             <groupId>ua.com.danilBugay</groupId>
             <artifactId>service</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
         </dependency>
     </dependencies>
 

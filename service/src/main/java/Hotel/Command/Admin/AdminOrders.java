@@ -1,10 +1,13 @@
-package Hotel.Command.Admin;
+package Hotel.command.Admin;
 
-import Hotel.Command.Command;
-import Hotel.DB.IDAO.IDAOFactory;
-import Hotel.DB.IDAO.OrderDAO;
-import Hotel.Entity.Order;
-import Hotel.MySQL.MySQLDAOFactory;
+import Hotel.command.Command;
+import Hotel.additionalEntity.Order;
+import Hotel.config.ApplicationConfig;
+import Hotel.service.OrderService;
+import Hotel.service.OrderServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,9 +19,9 @@ public class AdminOrders extends Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        IDAOFactory daoFactory = new MySQLDAOFactory();
-        OrderDAO daoOrder = daoFactory.createOrderDAO();
-        List<Order> dataRoomHistory = daoOrder.loadRoomHistory(ADMMIN_ID);
+        ApplicationContext context = new ClassPathXmlApplicationContext("model.xml");
+        OrderService service = context.getBean("order-service", OrderService.class);
+        List<Order> dataRoomHistory = service.loadRoomHistory(ADMMIN_ID);
         Integer sizeList = dataRoomHistory.size();
         int flagOrder = 1;
         if (sizeList == 0) {

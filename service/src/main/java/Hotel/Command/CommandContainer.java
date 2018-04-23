@@ -1,11 +1,11 @@
-package Hotel.Command;
+package Hotel.command;
 
 import java.util.HashMap;
 import java.util.Map;
-import Hotel.Command.Admin.*;
-import Hotel.Command.Client.*;
-import Hotel.Command.Order.*;
-import Hotel.Command.User.*;
+import Hotel.command.Admin.*;
+import Hotel.command.Client.*;
+import Hotel.command.Order.*;
+import Hotel.command.User.*;
 
 public class CommandContainer {
 

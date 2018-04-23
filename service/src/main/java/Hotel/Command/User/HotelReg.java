@@ -1,24 +1,27 @@
-package Hotel.Command.User;
+package Hotel.command.User;
 
-import Hotel.DB.IDAO.IDAOFactory;
-import Hotel.DB.IDAO.UserDAO;
-import Hotel.Command.Command;
-import Hotel.DBEntity.Room;
-import Hotel.DBEntity.Roomuser;
-import Hotel.MySQL.MySQLDAOFactory;
+import Hotel.command.Command;
+import Hotel.config.ApplicationConfig;
+import Hotel.entity.Room;
+import Hotel.entity.Roomuser;
+import Hotel.service.UserService;
+import Hotel.service.UserServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.io.IOException;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
 
 public class HotelReg extends Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        IDAOFactory daoFactory = new MySQLDAOFactory();
-        UserDAO daoUser = daoFactory.createUserDAO();
+        ApplicationContext context = new ClassPathXmlApplicationContext("model.xml");
+        UserService service = context.getBean("user-service", UserService.class);
         String forward;
         response.setContentType("text/html;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
@@ -34,8 +37,11 @@ public class HotelReg extends Command {
         }
         Roomuser user = new Roomuser().setULogin(userLogin).setUPass(userPassword).setUName(userName)
                 .setUMail(userMail).setUPhone(userPhone).setStatus("0");
-        boolean result = daoUser.regUser(user);
-        if (result != false) {
+        int result = service.regUser(user);
+        System.out.println(result);
+        System.out.println(result != 0);
+        if (result != -1) {
+            System.out.println("Ну да");
             forward = "Login.jsp";
         } else {
             request.getSession().setAttribute("ERROR_ID", 0);

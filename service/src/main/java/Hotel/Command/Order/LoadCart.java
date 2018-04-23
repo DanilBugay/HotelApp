@@ -1,7 +1,7 @@
-package Hotel.Command.Order;
+package Hotel.command.Order;
 
-import Hotel.Command.Command;
-import Hotel.DBEntity.Room;
+import Hotel.command.Command;
+import Hotel.entity.Room;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.ServletException;

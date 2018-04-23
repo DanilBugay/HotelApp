@@ -1,11 +1,14 @@
-package Hotel.Command.Client;
+package Hotel.command.Client;
 
-import Hotel.Command.Command;
-import Hotel.DB.IDAO.IDAOFactory;
-import Hotel.DB.IDAO.OrderDAO;
-import Hotel.Entity.Order;
-import Hotel.DBEntity.Roomuser;
-import Hotel.MySQL.MySQLDAOFactory;
+import Hotel.command.Command;
+import Hotel.additionalEntity.Order;
+import Hotel.config.ApplicationConfig;
+import Hotel.entity.Roomuser;
+import Hotel.service.OrderService;
+import Hotel.service.OrderServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,10 +18,10 @@ public class Home extends Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        IDAOFactory daoFactory = new MySQLDAOFactory();
-        OrderDAO daoOrder = daoFactory.createOrderDAO();
+        ApplicationContext context = new ClassPathXmlApplicationContext("model.xml");
+        OrderService service = context.getBean("order-service", OrderService.class);
         Roomuser user = (Roomuser) request.getSession().getAttribute("user");
-        List<Order> listRoomHistory = daoOrder.loadRommHistory(user);
+        List<Order> listRoomHistory = service.loadRommHistory(user);
         Integer sizeList;
         sizeList = listRoomHistory.size();
         if (sizeList == 0) {

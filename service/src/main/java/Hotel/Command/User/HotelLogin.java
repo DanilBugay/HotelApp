@@ -1,12 +1,15 @@
-package Hotel.Command.User;
+package Hotel.command.User;
 
-import Hotel.Command.Command;
-import Hotel.DB.IDAO.IDAOFactory;
-import Hotel.DB.IDAO.UserDAO;
-import Hotel.Entity.UserRole;
-import Hotel.DBEntity.Room;
-import Hotel.DBEntity.Roomuser;
-import Hotel.MySQL.MySQLDAOFactory;
+import Hotel.command.Command;
+import Hotel.additionalEntity.UserRole;
+import Hotel.config.ApplicationConfig;
+import Hotel.entity.Room;
+import Hotel.entity.Roomuser;
+import Hotel.service.UserService;
+import Hotel.service.UserServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -20,8 +23,8 @@ public class HotelLogin extends Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         HttpSession session = request.getSession();
-        IDAOFactory daoFactory = new MySQLDAOFactory();
-        UserDAO daoUser = daoFactory.createUserDAO();
+        ApplicationContext context = new ClassPathXmlApplicationContext("model.xml");
+        UserService service = context.getBean("user-service", UserService.class);
         String forward;
         String userLogin = request.getParameter("UserLogin");
         String userPassword = request.getParameter("UserPassword");
@@ -29,12 +32,10 @@ public class HotelLogin extends Command {
         if (orderRooms != null) {
             orderRooms.clear();
         }
-        Roomuser user = daoUser.login(userLogin, userPassword);
-        if (user != null) {
-            System.out.println(user.getUName());
-            UserRole userRole = UserRole.getRole(user);
-            session.setAttribute("user", user);
-            System.out.println(user);
+        List<Roomuser> user = service.login(userLogin, userPassword);
+        if (user.size() != 0) {
+            UserRole userRole = UserRole.getRole(user.get(0));
+            session.setAttribute("user", user.get(0));
             session.setAttribute("userRole", userRole);
             forward = "Index.jsp";
         } else {

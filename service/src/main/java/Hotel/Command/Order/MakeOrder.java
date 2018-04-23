@@ -1,11 +1,16 @@
-package Hotel.Command.Order;
+package Hotel.command.Order;
 
-import Hotel.DB.IDAO.IDAOFactory;
-import Hotel.DB.IDAO.OrderDAO;
-import Hotel.Command.Command;
-import Hotel.DBEntity.Room;
-import Hotel.DBEntity.Roomuser;
-import Hotel.MySQL.MySQLDAOFactory;
+import Hotel.additionalEntity.Order;
+import Hotel.command.Command;
+import Hotel.config.ApplicationConfig;
+import Hotel.entity.Room;
+import Hotel.entity.Roomuser;
+import Hotel.service.OrderService;
+import Hotel.service.OrderServiceImpl;
+import Hotel.service.UserService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
@@ -15,8 +20,8 @@ public class MakeOrder extends Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        IDAOFactory daoFactory = new MySQLDAOFactory();
-        OrderDAO daoOrder = daoFactory.createOrderDAO();
+        ApplicationContext context = new ClassPathXmlApplicationContext("model.xml");
+        OrderService service = context.getBean("order-service", OrderService.class);
         String forward = null;
         String userName;
         String userPhone;
@@ -27,7 +32,7 @@ public class MakeOrder extends Command {
         boolean flag = (boolean) request.getSession().getAttribute("aINFO");
         if (request.getParameter("bMakeOrderInfo") != null) {
             flag = true;
-            boolean result = false;
+            int result = -1;
             request.getSession().setAttribute("aINFO", true);
             if (user == null && flag == true) {
                 dateStart = (String) request.getSession().getAttribute("Attr_DateStart");
@@ -42,9 +47,9 @@ public class MakeOrder extends Command {
                 List<Room> orderRooms = (List) request.getSession().getAttribute("dataSelectRoom");
                 for (int i = 0; i < orderRooms.size(); i++) {
                     Room room = orderRooms.get(i);
-                    result = daoOrder.roomHistoryInsert(room, dateStart, dateEnd, user, 1);
+                    result = service.roomHistoryInsert(room, dateStart, dateEnd, user, 1);
                 }
-                if (result == true) {
+                if (result != -1) {
                     forward = "Order.jsp";
                 } else {
                     forward = "Error.jsp";
@@ -52,7 +57,7 @@ public class MakeOrder extends Command {
             }
         }
         if (request.getParameter("bMakeOrder") != null) {
-            boolean result = false;
+            int result = -1;
             user = (Roomuser) request.getSession().getAttribute("user");
             if (user != null || flag == true) {
                 dateStart = (String) request.getSession().getAttribute("Attr_DateStart");
@@ -61,9 +66,9 @@ public class MakeOrder extends Command {
                 request.getSession().setAttribute("aUSER_NAME", String.valueOf(user.getUName()));
                 for (int i = 0; i < orderRooms.size(); i++) {
                     Room room = orderRooms.get(i);
-                    result = daoOrder.roomHistoryInsert(room, dateStart, dateEnd, user, 1);
+                    result = service.roomHistoryInsert(room, dateStart, dateEnd, user, 1);
                 }
-                if (result == true) {
+                if (result != -1) {
                     forward = "Order.jsp";
                 } else {
                     forward = "Error.jsp";
