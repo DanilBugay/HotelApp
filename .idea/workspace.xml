@@ -6,109 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27d0d130-643e-400c-9b9d-7983f3797203" name="Default" comment="Rewrite with Spring MVC instead servlets">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/client_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/client_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ProjectDanilBugay.iml" afterPath="$PROJECT_DIR$/ProjectDanilBugay.iml" />
-      <change beforePath="$PROJECT_DIR$/client/client.iml" afterPath="$PROJECT_DIR$/client/client.iml" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/webapp/AdminOrders.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/webapp/Cart.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/webapp/Catalog.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/webapp/Error.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/webapp/Home.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/webapp/Index.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/webapp/Login.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/webapp/Order.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/webapp/SignUp.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/webapp/UserInfo.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/client/src/main/webapp/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/client/src/main/webapp/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/webapp/jspf/head.jspf" afterPath="$PROJECT_DIR$/client/src/main/webapp/jspf/head.jspf" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/webapp/jspf/header.jspf" afterPath="$PROJECT_DIR$/client/src/main/webapp/jspf/header.jspf" />
-      <change beforePath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT.war" />
-      <change beforePath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/AdminOrders.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/Cart.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/Catalog.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/Error.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/Home.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/Index.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/Login.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/Order.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/SignUp.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/UserInfo.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/WEB-INF/lib/service-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/WEB-INF/lib/service-1.0-SNAPSHOT.jar" />
-      <change beforePath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/css/style.css" afterPath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/jspf/head.jspf" afterPath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/jspf/head.jspf" />
-      <change beforePath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/jspf/header.jspf" afterPath="$PROJECT_DIR$/client/target/clinet-1.0-SNAPSHOT/jspf/header.jspf" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.annotation.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.ejb.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.jms.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.persistence.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.resource.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.transaction.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/service/model.iml" afterPath="$PROJECT_DIR$/service/model.iml" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/Command/Admin/AdminConfirm.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/Command/Admin/AdminOrders.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/Command/Client/Home.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/Command/Command.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/Command/CommandContainer.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/Command/Order/CartAdd.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/Command/Order/HotelCatalog.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/Command/Order/LoadCart.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/Command/Order/MakeOrder.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/Command/User/HotelLogOut.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/Command/User/HotelLogin.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/Command/User/HotelReg.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/Controller.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/HotelInit.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/config/ApplicationConfig.java" afterPath="$PROJECT_DIR$/service/src/main/java/Hotel/config/ApplicationConfig.java" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/dao/mySQL/MySQLOrderDAO.java" afterPath="$PROJECT_DIR$/service/src/main/java/Hotel/dao/mySQL/MySQLOrderDAO.java" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/Hotel/entity/Room.java" afterPath="$PROJECT_DIR$/service/src/main/java/Hotel/entity/Room.java" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/service/src/main/resources/META-INF/persistence.xml" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/resources/model.xml" afterPath="$PROJECT_DIR$/service/src/main/resources/model.xml" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/resources/mysqlconnection.xml" afterPath="$PROJECT_DIR$/service/src/main/resources/mysqlconnection.xml" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/Command/Admin/AdminConfirm.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/Command/Admin/AdminOrders.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/Command/Client/Home.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/Command/Command.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/Command/CommandContainer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/Command/Order/CartAdd.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/Command/Order/HotelCatalog.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/Command/Order/LoadCart.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/Command/Order/MakeOrder.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/Command/User/HotelLogOut.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/Command/User/HotelLogin.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/Command/User/HotelReg.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/Controller.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/HotelInit.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/config/ApplicationConfig.class" afterPath="$PROJECT_DIR$/service/target/classes/Hotel/config/ApplicationConfig.class" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/dao/mySQL/MySQLOrderDAO.class" afterPath="$PROJECT_DIR$/service/target/classes/Hotel/dao/mySQL/MySQLOrderDAO.class" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/Hotel/entity/Room.class" afterPath="$PROJECT_DIR$/service/target/classes/Hotel/entity/Room.class" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/service/target/classes/META-INF/persistence.xml" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/model.xml" afterPath="$PROJECT_DIR$/service/target/classes/model.xml" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/mysqlconnection.xml" afterPath="$PROJECT_DIR$/service/target/classes/mysqlconnection.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/model.xml" afterPath="$PROJECT_DIR$/target/classes/main/resources/model.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/mysqlconnection.xml" afterPath="$PROJECT_DIR$/target/classes/main/resources/mysqlconnection.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/webapp/AdminOrders.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/webapp/Cart.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/webapp/Catalog.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/webapp/Error.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/webapp/Home.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/webapp/Index.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/webapp/Login.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/webapp/Order.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/webapp/SignUp.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/webapp/UserInfo.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/classes/main/webapp/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/target/classes/main/webapp/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/webapp/jspf/head.jspf" afterPath="$PROJECT_DIR$/target/classes/main/webapp/jspf/head.jspf" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/webapp/jspf/header.jspf" afterPath="$PROJECT_DIR$/target/classes/main/webapp/jspf/header.jspf" />
-    </list>
+    <list default="true" id="27d0d130-643e-400c-9b9d-7983f3797203" name="Default" comment="Rewrite with Spring MVC instead servlets" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/service/target/" />
@@ -182,8 +80,8 @@
       <file leaf-file-name="header.jspf" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/main/webapp/jspf/header.jspf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="63" column="22" lean-forward="false" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+            <state relative-caret-position="399">
+              <caret line="19" column="83" lean-forward="true" selection-start-line="19" selection-start-column="83" selection-end-line="19" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -722,8 +620,16 @@
       <workItem from="1527699023187" duration="11846000" />
       <workItem from="1527768194599" duration="6708000" />
       <workItem from="1527867313244" duration="3053000" />
-      <workItem from="1527875225496" duration="410000" />
+      <workItem from="1527875225496" duration="576000" />
     </task>
+    <task id="LOCAL-00001" summary="Rewrite with Spring MVC instead servlets">
+      <created>1527875683421</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527875683421</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -759,7 +665,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157803000" />
+    <option name="totallyTimeSpent" value="157969000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -771,7 +677,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -786,7 +692,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47446084" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46992055" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46992055" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1156,8 +1062,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/webapp/jspf/header.jspf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="63" column="22" lean-forward="false" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+        <state relative-caret-position="399">
+          <caret line="19" column="83" lean-forward="true" selection-start-line="19" selection-start-column="83" selection-end-line="19" selection-end-column="83" />
           <folding />
         </state>
       </provider>
