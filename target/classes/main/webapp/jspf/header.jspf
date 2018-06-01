@@ -10,9 +10,9 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li> <a href="SignUp.jsp"><button type="submit" class="btn btn-primary">Sign up <i class="fa fa-user fa-lg icon_sign_up"></i></button></a></li>
-                        <li><a href="Login.jsp"><button type="submit" class="btn btn-primary">Sign in<i class="fa fa-sign-in fa-lg icon_sign_up"></i></button></a></li>
-                        <li><a href="#"><form action="Controller" method="POST">
+                        <li> <a href="${pageContext.request.contextPath}/SignUp.jsp"><button type="submit" class="btn btn-primary">Sign up <i class="fa fa-user fa-lg icon_sign_up"></i></button></a></li>
+                        <li><a href="${pageContext.request.contextPath}/views/Login.jsp"><button type="submit" class="btn btn-primary">Sign in<i class="fa fa-sign-in fa-lg icon_sign_up"></i></button></a></li>
+                        <li><a href="#"><form action="${pageContext.request.contextPath}/loadCard" method="Get">
                                     <input type="hidden" name="command" value="LoadCart" />
                                     <button type="submit" class="btn btn-primary">Cart<i class="fa fa-cart-arrow-down fa-lg icon_sign_up"></i></button></form></a></li>
                     </ul>
@@ -52,10 +52,10 @@
                             <li><a href=""><form action="Controller" method="POST">
                                         <input type="hidden" name="command" value="Home" />
                                         <button type="submit" class="btn btn-primary">Home<i class="fa fa-user fa-lg icon_sign_up"></i></button></form></a></li>
-                            <li><a href=""><form action="Controller" method="POST">
+                            <li><a href=""><form action="${pageContext.request.contextPath}/logOut" method="Get">
                                         <input type="hidden" name="command" value="HotelLogOut" />
                                         <button type="submit" class="btn btn-primary">Sign out<i class="fa fa-sign-out  fa-lg icon_sign_up"></i></button></form></a></li>
-                            <li><a href="#"><form action="Controller" method="POST">
+                            <li><a href="#"><form action="${pageContext.request.contextPath}/loadCard" method="Get">
                                         <input type="hidden" name="command" value="LoadCart" />
                                         <button type="submit" class="btn btn-primary">Cart<i class="fa fa-cart-arrow-down fa-lg icon_sign_up"></i></button></form></a></li>
                         </ul>

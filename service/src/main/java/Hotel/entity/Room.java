@@ -2,6 +2,7 @@ package Hotel.entity;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "room")
@@ -11,7 +12,25 @@ public class Room implements java.io.Serializable {
     @Column(name = "room_num", nullable = false)
     private int roomNum;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Room room = (Room) o;
+        return roomNum == room.roomNum &&
+                idRoomtype == room.idRoomtype &&
+                Float.compare(room.rate, rate) == 0 &&
+                Objects.equals(descript, room.descript) &&
+                Objects.equals(srcPhoto, room.srcPhoto);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(roomNum, idRoomtype, rate, descript, srcPhoto);
+    }
+
     @Column(name = "id_roomtype", nullable = false)
+
     private int idRoomtype;
 
     @Column(name = "rate", nullable = false)

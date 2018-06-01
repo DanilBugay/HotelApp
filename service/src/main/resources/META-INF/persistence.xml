@@ -4,7 +4,6 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
-            <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="org.hibernate.envers.revision_on_collection_change" value="false"/>
             <property name="org.hibernate.envers.store_data_at_delete" value="false"/>

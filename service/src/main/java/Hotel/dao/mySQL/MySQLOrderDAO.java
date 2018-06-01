@@ -42,7 +42,7 @@ public class MySQLOrderDAO implements OrderDAO {
         Date dStart = stringToDate(dateStart, "dd.MM.yyyy");
         Date dEnd = stringToDate(dateEnd, "dd.MM.yyyy");
         Query query = em.createQuery("select hs from Roomhistory hs WHERE room = :cRoom and dateStart = :dStart and " +
-                "dateEnd = :dEnd");
+                "dateEnd = :dEnd and roomstatus = 1");
         query.setParameter("cRoom", room);
         query.setParameter("dStart", dStart);
         query.setParameter("dEnd", dEnd);

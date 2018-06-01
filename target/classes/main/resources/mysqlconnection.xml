@@ -7,7 +7,7 @@
 
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="dbconnection.properties"/>
+        <property name="location" value="classpath:dbconnection.properties"/>
     </bean>
 
     <!-- DataSource configuration -->
